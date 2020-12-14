@@ -19,8 +19,8 @@ class SearchBar extends React.Component {
               className={scss.searchbar__input}
               name="q"
               type="search"
-              placeholder="Search the Black Women's Suffrage Collection"
-              aria-label="Search the Black Women's Suffrage Collection"
+              placeholder="Search the BSCDN"
+              aria-label="Search the BSCDN"
               autoComplete="off"
               defaultValue={router && router.query && router.query.q ? router.query.q : ""}
             />

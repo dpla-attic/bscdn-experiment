@@ -16,10 +16,10 @@ class MainLayout extends React.Component {
         <Helmet htmlAttributes={{ lang: "en" }} />
         <Navbar />
         <MobileNavbar />
-        <div className="container__curve">
+        <div className="container__items">
           {children}
         </div>
-        <Footer/>
+        {/* <Footer/> */}
         </GoogleAnalytics>
       </main>
     );
