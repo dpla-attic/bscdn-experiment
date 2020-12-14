@@ -1,0 +1,139 @@
+@import "stylesheets/variables";
+
+.footer {
+  background-color: $jaguar;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+
+  img::first {
+    width: 50%;
+  }
+
+  img {
+    margin: 1em 0;
+  }
+
+  .footer__container {
+    padding: 3.125em;
+
+  }
+
+  .footer__section_top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer__section_bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+
+    a {
+      color: $white;
+      font-family: $inter;
+      text-decoration: none;
+      margin: .5em 0;
+    }
+  }
+
+  .footer__divider {
+    height: 1px;
+    width: 100%;
+    opacity: 0.25;
+    background-color: #D8D8D8;
+    margin: 1.5em 0;
+  }
+
+  .footer__p {
+    opacity: 0.5;
+    color: #FFFEFE;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 18px;
+    font-family: $inter;
+    margin: 0;
+  }
+
+  .footer__links_small {
+    display: flex;
+    height: 1em;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1em;
+    text-align: right;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2em;
+    
+    .footer__a {
+      border-right: 1px rgba(216, 216, 216, 0.5) solid;
+      padding-right: .75em;
+    }
+
+    a {
+      color: #FFFEFE;
+      font-family: $inter;
+      text-decoration: none;
+      padding: 0.125em;
+      padding-left: .25em;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and ($md-viewport) { 
+  .footer {
+    .footer__links {
+      width: 90%;
+    }
+
+    .footer__links_small {
+      justify-content: center;
+
+      a {
+        padding-left: .5em;
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 1152px and up) */
+@media only screen and ($lg-viewport) {
+  .footer {
+    .footer__section_top {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .footer__links {
+        width: 50%;
+        justify-content: space-evenly;
+      }
+    }
+
+    .footer__links_small_container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      
+      .footer__section_bottom {
+        width: 70%;
+      }
+
+    }
+
+  }
+}

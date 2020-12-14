@@ -1,0 +1,37 @@
+{
+  "name": "black-womens-suffrage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rm -rf .next ./build ./coverage ./node_modules",
+    "nuke": "npm run clean && npm i && npm run build && npm run start",
+    "cy:open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run"
+  },
+  "dependencies": {
+    "babel-plugin-inline-react-svg": "^1.1.1",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "localforage": "^1.9.0",
+    "moment": "^2.27.0",
+    "next": "9.4.4",
+    "next-ga": "^2.3.4",
+    "next-http-proxy-middleware": "^1.0.4",
+    "react": "16.13.1",
+    "react-aria-modal": "^4.0.0",
+    "react-dom": "16.13.1",
+    "react-dropdown": "^1.8.0",
+    "react-ga": "^2.7.0",
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^4.3.1",
+    "react-slick": "^0.27.2-beta-1",
+    "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "@cypress/snapshot": "^2.1.7",
+    "cypress": "^5.1.0"
+  }
+}

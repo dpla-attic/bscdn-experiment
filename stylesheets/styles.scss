@@ -1,0 +1,36 @@
+.container {
+   position: relative;
+   max-width: 1440px;
+   margin: auto;
+ }
+
+.section__default {
+  margin: 3rem;
+ 
+  @media(max-width: 600px) {
+    margin: 1rem;
+    height: auto;
+  }
+}
+
+.title {
+  height: 1.063rem;
+  color: #E27979;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.075rem;
+  line-height: 1.063rem;
+}
+
+.large_page_section {
+  height: 55rem;
+}
+
+.container__curve {
+  border-radius: 0 0 115px 115px;
+  background: white;  
+
+  @media(min-width: 600px) {
+    border-radius: 0 0 150px 150px;
+  }
+}

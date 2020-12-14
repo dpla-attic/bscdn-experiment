@@ -1,0 +1,42 @@
+// BWS Colors
+
+$white: #fff;
+$black: #000;
+$wePeep: #FEDFDF;
+$lightCoral: #F18787;
+$cinnabar: #EC5938;
+$nyPink: #E27979;
+$geraldine: #E77878;
+$vividViolet: #8B2D9B;
+$blueGem: #4E4294;
+$jaguar: #282830;
+$dimmerGray: #6d6d6d;
+$romanceGray: #f9f6f0;
+$gainsboroGray: #dcdcdc;
+
+/* semantic colors */
+
+$linkColor: $vividViolet !default;
+$linkHoverColor: $blueGem !default;
+$visitedLinkColor: $nyPink !default;
+$paginationLinkColor: $vividViolet !default;
+$subLinkColor: $geraldine !default;
+$subLinkColorHover: darken($linkColor, 10%);
+$lightBorderColor: #e7e7e7 !default;
+$grayBorderColor: lighten($dimmerGray, 45%) !default;
+$secondaryButtonColor: $vividViolet !default;
+$secondaryColor: $secondaryButtonColor !default;
+$primaryBulletColor: $secondaryButtonColor !default;
+$secondaryBulletColor: $linkColor !default;
+$darkSecondaryButtonColor: $blueGem !default;
+$warmerBackgroundColor: $romanceGray !default;
+$darkerBackgroundColor: darken($warmerBackgroundColor, 20%) !default;
+$colderBackgroundColor: #f3f7f8 !default;
+$featuredBannerColor: $geraldine !default;
+$outgoingLinkColor: $subLinkColor !default;
+$dimmedTextColor: $dimmerGray !default;
+$donateFormButtonColor: $vividViolet !default;
+$outlineColor: $geraldine !default;
+$formLabelColor: $vividViolet !default;
+$errorColor: $linkColor !default;
+$radioButtonColor: $gainsboroGray !default;

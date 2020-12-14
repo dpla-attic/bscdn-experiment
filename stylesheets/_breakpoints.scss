@@ -1,0 +1,12 @@
+$xSmallEm: 30em; // 480px
+$smallEm: 40em; // 640px
+$mediumEm: 48em; // 768px
+$mediumPlusEm: 62em; //992px
+$largeEm: 72em; // 1152px
+$xLargeEm: 82em; //1312px
+
+$xsm-viewport: "min-width: " + $xSmallEm;
+$sm-viewport: "min-width: " + $smallEm;
+$md-viewport: "min-width: " + $mediumEm;
+$mdP-viewport: "min-width: " + $mediumPlusEm;
+$lg-viewport: "min-width: " + $largeEm;
