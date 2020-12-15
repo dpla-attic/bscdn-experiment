@@ -3,6 +3,7 @@ import Link from 'next/link'
 import scss from "./Navbar.module.scss"
 import SearchBar from "components/shared/SearchBar";
 import ActiveLink from './ActiveLink'
+import SearchIcon from '@material-ui/icons/Search';
 
 class Navbar extends Component {
   constructor() {
@@ -37,6 +38,7 @@ class Navbar extends Component {
           <div className={scss.nav__logo} data-cy="nav__logo">
             <Link href="/">
               <a>
+                
                 <img src={'static/logo/logo.png'} alt="Big Sky Digital Network"/>
               </a>
             </Link>
@@ -52,7 +54,7 @@ class Navbar extends Component {
             <div className={scss.divider} />
 
             <button onClick={this.triggerSearchbar} data-cy="searchbar__icon">
-              <img src={"/static/icon/search/search-bar.svg"} alt="Search Bar" className={scss.searchIcon} />
+              <SearchIcon />
             </button>
 
           </div>

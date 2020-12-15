@@ -12,6 +12,7 @@ import {
 } from "constants/search";
 
 import css from "./OptionsBar.module.scss";
+import SearchBar from "../../shared/SearchBar";
 
 const gridViewIcon = "/static/icon/search/icon-search-view-grid-selected.svg";
 const inactiveGridViewIcon = "/static/icon/search/icon-search-view-grid-inactive.svg";

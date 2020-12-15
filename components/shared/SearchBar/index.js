@@ -22,30 +22,28 @@ const SearchBar = ({ searchQuery, router }) => {
   const classes = useStyles();
 
   return (
-    <>
-      <form action="/search" data-cy="searchbar" className={classes.form}>
-        <Input
-          autoFocus="true"
-          key={searchQuery}
-          className={classes.input}
-          defaultValue={router && router.query && router.query.q ? router.query.q : ""}
-          placeholder="Search the Big Sky Digital Network"
-          aria-label="Search the Big Sky Digital Network"
-          autoComplete="off"
-          name="q"
-          type="search"
-          startAdornment={
-            <InputAdornment position="start">
-              <SearchIcon />
-            </InputAdornment>
-          }
-          endAdornment={
-            <Button variant="contained" color="primary" disableElevation type="submit">
-              SEARCH
-            </Button>}
-        />
-      </form>
-    </>
+    <form action="/search" data-cy="searchbar" className={classes.form}>
+      <Input
+        autoFocus={true}
+        key={searchQuery}
+        className={classes.input}
+        defaultValue={router && router.query && router.query.q ? router.query.q : ""}
+        placeholder="Search the Big Sky Digital Network"
+        aria-label="Search the Big Sky Digital Network"
+        autoComplete="off"
+        name="q"
+        type="search"
+        startAdornment={
+          <InputAdornment position="start">
+            <SearchIcon />
+          </InputAdornment>
+        }
+        endAdornment={
+          <Button variant="contained" color="primary" disableElevation type="submit">
+            SEARCH
+          </Button>}
+      />
+    </form>
   );
 }
 

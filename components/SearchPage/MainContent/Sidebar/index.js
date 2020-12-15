@@ -2,8 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Router from "next/router";
 
-import Button from "components/shared/Button";
+// import Button from "components/shared/Button";
 import Accordion from "components/shared/Accordion";
+import { Button } from '@material-ui/core'
 
 import {
   possibleFacets,
@@ -186,7 +187,7 @@ class DateFacet extends React.Component {
         {Object.entries(formVals).map(([k, v], index) => {
           return <input type="hidden" name={k} key={index} value={v} />;
         })}
-        <Button type="secondary" className={css.dateButton} mustSubmit={true}>
+        <Button variant="contained" color="primary" disableElevation mustSubmit={true}>
           SET
         </Button>
       </form>
