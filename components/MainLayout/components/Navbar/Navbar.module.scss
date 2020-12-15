@@ -23,6 +23,13 @@
       letter-spacing: 0.2px;
       margin-right: 1.75rem;
       line-height: 35px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      img {
+        height: 50px;
+      }
     }
 
     .active {

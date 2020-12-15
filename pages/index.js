@@ -9,7 +9,7 @@ const Home = () => {
           <BSCDNHead 
           pageTitle="BSCDN Experiment | DPLA"
           pageDescription=""
-          pageImage="/static/graphic/home-page/home-graphic-body-1-mobile.png"
+          pageImage="/static/graphic/image/home-hero-bg.png"
           pageImageCaption="Images from the BSCDN Experiment"
           />
         <HomePage/>

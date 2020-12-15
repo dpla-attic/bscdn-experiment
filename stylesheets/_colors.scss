@@ -14,17 +14,20 @@ $dimmerGray: #6d6d6d;
 $romanceGray: #f9f6f0;
 $gainsboroGray: #dcdcdc;
 
+$navyBlue: #002A86;
+$gold: #E1C520;
+
 /* semantic colors */
 
-$linkColor: $vividViolet !default;
+$linkColor: $navyBlue !default;
 $linkHoverColor: $blueGem !default;
 $visitedLinkColor: $nyPink !default;
-$paginationLinkColor: $vividViolet !default;
+$paginationLinkColor: $navyBlue !default;
 $subLinkColor: $geraldine !default;
 $subLinkColorHover: darken($linkColor, 10%);
 $lightBorderColor: #e7e7e7 !default;
 $grayBorderColor: lighten($dimmerGray, 45%) !default;
-$secondaryButtonColor: $vividViolet !default;
+$secondaryButtonColor: $navyBlue !default;
 $secondaryColor: $secondaryButtonColor !default;
 $primaryBulletColor: $secondaryButtonColor !default;
 $secondaryBulletColor: $linkColor !default;
@@ -35,8 +38,8 @@ $colderBackgroundColor: #f3f7f8 !default;
 $featuredBannerColor: $geraldine !default;
 $outgoingLinkColor: $subLinkColor !default;
 $dimmedTextColor: $dimmerGray !default;
-$donateFormButtonColor: $vividViolet !default;
-$outlineColor: $geraldine !default;
-$formLabelColor: $vividViolet !default;
+$donateFormButtonColor: $navyBlue !default;
+$outlineColor: $gold !default;
+$formLabelColor: $navyBlue !default;
 $errorColor: $linkColor !default;
 $radioButtonColor: $gainsboroGray !default;

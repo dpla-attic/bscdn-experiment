@@ -37,7 +37,7 @@ class Navbar extends Component {
           <div className={scss.nav__logo} data-cy="nav__logo">
             <Link href="/">
               <a>
-                Home
+                <img src={'static/logo/logo.png'} alt="Big Sky Digital Network"/>
               </a>
             </Link>
           </div>
