@@ -46,17 +46,11 @@ const Footer = () => {
         <section className={scss.footer__divider}></section>
         <div className={scss.footer__links_small_container}>
           <nav className={scss.footer__links_small} data-cy="footer__links_small">
-            <a href="http://dp.la/" rel="noopener" target="_blank" className={scss.footer__a}> Visit DPLA</a>
-
-            <Link href="/harmful-language-statement">
-              <a>Harmful Language Statement</a>
-            </Link>
+            <a href="http://dp.la/" rel="noopener" target="_blank"> Visit DPLA</a>
           </nav>
 
           <section className={scss.footer__section_bottom}>
-            <p className={scss.footer__p}>The copyright status of items in DPLA's Black Women's Suffrage Collection varies. DPLA links to a wide variety of different materials: many are in the public domain,
-            while others are under rights restrictions but nonetheless publicly viewable. For individual rights information about an item, please check the “Rights” field in the metadata,
-        or follow the link to the digital object on the content provider’s website for more information.</p>
+            <p className={scss.footer__p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus aliquam velit, sit amet lacinia mauris pretium quis. Donec enim arcu, vehicula sed rutrum vitae, elementum quis justo. Duis lacinia nec sem eget tincidunt. Integer finibus consectetur odio vel bibendum. Aenean ultricies urna sed venenatis laoreet. Nullam malesuada rhoncus nisi eu mattis. Pellentesque vitae tempor mauris, sit amet malesuada diam. Sed vel augue consequat, feugiat lorem vel, blandit nisi. Sed velit mauris, convallis at ligula non, convallis pulvinar nisl.</p>
           </section>
         </div>
       </div>

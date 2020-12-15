@@ -37,34 +37,17 @@ class Navbar extends Component {
           <div className={scss.nav__logo} data-cy="nav__logo">
             <Link href="/">
               <a>
-                <img src="/static/logo/dpla_bws-logo-color-nav.png" alt="Black Women's Suffrage Logo" />
+                <img src={'static/logo/logo.png'} alt="Big Sky Digital Network"/>
               </a>
             </Link>
           </div>
 
           <div className={scss.nav__links} data-cy="nav__links">
 
-            <ActiveLink activeClassName={scss.active} href="/about">
+            {/* <ActiveLink activeClassName={scss.active} href="/about">
               <a>About</a>
-            </ActiveLink>
+            </ActiveLink> */}
 
-            <ActiveLink activeClassName={scss.active} href="/timeline">
-              <a>Timeline</a>
-            </ActiveLink>
-
-            <ActiveLink activeClassName={scss.active} href="/key-figures">
-              <a>Key Figures</a>
-            </ActiveLink>
-
-            <ActiveLink activeClassName={scss.active} href="/collections">
-              <a>Collections</a>
-            </ActiveLink>
-
-            <ActiveLink activeClassName={scss.active} href="/partners">
-              <a>Partners</a>
-            </ActiveLink>
-
-            <div className={scss.divider} />
             <a href="https://dp.la" target="_blank">Visit DPLA</a>
             <div className={scss.divider} />
 

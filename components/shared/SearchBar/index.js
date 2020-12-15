@@ -19,15 +19,15 @@ class SearchBar extends React.Component {
               className={scss.searchbar__input}
               name="q"
               type="search"
-              placeholder="Search the Black Women's Suffrage Collection"
-              aria-label="Search the Black Women's Suffrage Collection"
+              placeholder="Search the Big Sky Digital Network"
+              aria-label="Search the Big Sky Digital Network"
               autoComplete="off"
               defaultValue={router && router.query && router.query.q ? router.query.q : ""}
             />
             <CurvedButton text="SEARCH" type="submit" />
           </div>
 
-          {router.route !== '/search' &&
+          {/* {router.route !== '/search' &&
             <div className={scss.searchbar__button_advanced}>
               <Link href="/search">
                 <a>
@@ -36,7 +36,7 @@ class SearchBar extends React.Component {
                 </a>
               </Link>
             </div>
-          }
+          } */}
         </form>
       </>
     );

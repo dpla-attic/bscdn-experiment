@@ -26,11 +26,6 @@
   height: 55rem;
 }
 
-.container__curve {
-  border-radius: 0 0 115px 115px;
+.container__items {
   background: white;  
-
-  @media(min-width: 600px) {
-    border-radius: 0 0 150px 150px;
-  }
 }
