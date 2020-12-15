@@ -1,6 +1,10 @@
-import React from "react";
 import Link from "next/link";
 import Router from "next/router";
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import ListIcon from '@material-ui/icons/List';
+import AppsIcon from '@material-ui/icons/Apps';
 
 import { addCommasToNumber } from "lib";
 import {
@@ -12,12 +16,6 @@ import {
 } from "constants/search";
 
 import css from "./OptionsBar.module.scss";
-import SearchBar from "../../shared/SearchBar";
-
-const gridViewIcon = "/static/icon/search/icon-search-view-grid-selected.svg";
-const inactiveGridViewIcon = "/static/icon/search/icon-search-view-grid-inactive.svg";
-const listViewIcon = "/static/icon/search/icon-search-view-list-selected.svg";
-const inactiveListViewIcon = "/static/icon/search/icon-search-view-list-inactive.svg";
 
 class OptionsBar extends React.Component {
   componentWillMount() {
@@ -54,6 +52,7 @@ class OptionsBar extends React.Component {
   }
 
   onPageSizeChange = val => {
+    val.preventDefault()
     Router.push({
       pathname: "/search",
       query: Object.assign({}, this.props.route.query, {
@@ -63,7 +62,8 @@ class OptionsBar extends React.Component {
     });
   };
 
-  onSortChange = val => {
+  onSortChange = (val) => {
+    val.preventDefault()
     Router.push({
       pathname: "/search",
       query: Object.assign({}, this.props.route.query, {
@@ -78,6 +78,7 @@ class OptionsBar extends React.Component {
     this.setState({ showFilters: !this.state.showFilters });
   };
 
+
   render() {
     const {
       currentPage,
@@ -91,23 +92,19 @@ class OptionsBar extends React.Component {
           <div className={css.optionsBar + ``}>
             <div className={css.resultsAndFilter}>
               <div className={css.optionWrapper}>
-                <label
-                  htmlFor="options-bar-page-size"
-                  className={css.optionHeader}
-                >
-                  Show:
-                </label>
-                <select
-                  id="options-bar-page-size"
+                <InputLabel>Show:</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
                   value={this.state.pageSizeValue}
                   onChange={this.onPageSizeChange}
                 >
                   {pageSizeOptions.map((item, index) =>
-                    <option value={item.value} key={index}>
+                    <MenuItem value={item.value} key={index}>
                       {item.label}
-                    </option>
+                    </MenuItem>
                   )}
-                </select>
+                </Select>
               </div>
               <h1 className={css.resultsCount}>
                 <span>
@@ -144,20 +141,20 @@ class OptionsBar extends React.Component {
 
             <div className={css.options}>
               <div className={css.optionWrapper}>
-                <label htmlFor="options-bar-sort-by" className={css.optionHeader}>
-                  Sort
-                </label>
-                <select
-                  id="options-bar-sort-by"
+                <InputLabel>Sort By:</InputLabel>
+                <Select
+                  autoWidth={true}
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
                   value={this.state.sortValue}
                   onChange={this.onSortChange}
                 >
                   {sortOptions.map((item, index) =>
-                    <option value={item.value} key={index}>
+                    <MenuItem value={item.value} key={index}>
                       {item.label}
-                    </option>
+                    </MenuItem>
                   )}
-                </select>
+                </Select>
               </div>
               <div className={css.optionWrapper}>
                 <div className={css.viewButtons}>
@@ -177,11 +174,7 @@ class OptionsBar extends React.Component {
                           : css.viewButtonActive
                       ].join(" ")}
                     >
-                      <img
-                        className={css.viewButtonIcon}
-                        src={this.props.route.query.list_view === "grid" ? inactiveListViewIcon : listViewIcon}
-                        alt="List View"
-                      />
+                      <ListIcon color="inherit"/>
                     </a>
                   </Link>
                   <Link
@@ -200,11 +193,7 @@ class OptionsBar extends React.Component {
                           : css.viewButtonInactive
                       ].join(" ")}
                     >
-                      <img
-                        className={css.viewButtonIcon}
-                        src={this.props.route.query.list_view === "grid" ? gridViewIcon : inactiveGridViewIcon}
-                        alt="Grid View"
-                      />
+                      <AppsIcon />
                     </a>
                   </Link>
                 </div>

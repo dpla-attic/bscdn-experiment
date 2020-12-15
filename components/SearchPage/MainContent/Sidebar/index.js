@@ -187,7 +187,7 @@ class DateFacet extends React.Component {
         {Object.entries(formVals).map(([k, v], index) => {
           return <input type="hidden" name={k} key={index} value={v} />;
         })}
-        <Button variant="contained" color="primary" disableElevation mustSubmit={true}>
+        <Button variant="contained" color="primary" disableElevation>
           SET
         </Button>
       </form>
