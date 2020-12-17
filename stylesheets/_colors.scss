@@ -10,7 +10,8 @@ $geraldine: #E77878;
 $vividViolet: #8B2D9B;
 $blueGem: #4E4294;
 $jaguar: #282830;
-$dimmerGray: #6d6d6d;
+// $dimmerGray: #6d6d6d;
+$dimmerGray: #cac7c7;
 $romanceGray: #f9f6f0;
 $gainsboroGray: #dcdcdc;
 
@@ -21,7 +22,7 @@ $gold: #E1C520;
 
 $linkColor: $navyBlue !default;
 $linkHoverColor: $blueGem !default;
-$visitedLinkColor: $nyPink !default;
+$visitedLinkColor: $vividViolet !default;
 $paginationLinkColor: $navyBlue !default;
 $subLinkColor: $geraldine !default;
 $subLinkColorHover: darken($linkColor, 10%);

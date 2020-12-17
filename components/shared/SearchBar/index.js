@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '1em',
     width: '60%'
   },
-  form: {
+  center: {
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex'
@@ -22,7 +22,7 @@ const SearchBar = ({ searchQuery, router }) => {
   const classes = useStyles();
 
   return (
-    <form action="/search" data-cy="searchbar" className={classes.form}>
+    <form action="/search" data-cy="searchbar" className={classes.center}>
       <Input
         autoFocus={true}
         key={searchQuery}

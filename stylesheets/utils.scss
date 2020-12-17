@@ -181,9 +181,9 @@ a {
     }
   }
 
-  &:visited {
-    color: $visitedLinkColor;
-  }
+  // &:visited {
+  //   color: $visitedLinkColor;
+  // }
 
   &:hover {
     text-decoration: underline;

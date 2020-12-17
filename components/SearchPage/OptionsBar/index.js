@@ -166,6 +166,14 @@ class OptionsBar extends React.Component {
                       })
                     }}
                   >
+                    {/* <a
+                      className={[
+                        css.listViewButton,
+                        this.props.route.query.list_view === "grid"
+                          ? css.viewButtonInactive
+                          : css.viewButtonActive
+                      ].join(" ")}
+                    > */}
                     <a
                       className={[
                         css.listViewButton,
@@ -174,7 +182,7 @@ class OptionsBar extends React.Component {
                           : css.viewButtonActive
                       ].join(" ")}
                     >
-                      <ListIcon color="inherit"/>
+                      <ListIcon color={this.props.route.query.list_view === "grid" ? "disabled" : ""}/>
                     </a>
                   </Link>
                   <Link
@@ -193,7 +201,7 @@ class OptionsBar extends React.Component {
                           : css.viewButtonInactive
                       ].join(" ")}
                     >
-                      <AppsIcon />
+                      <AppsIcon color={this.props.route.query.list_view === "grid" ? "" : "disabled"}/>
                     </a>
                   </Link>
                 </div>
