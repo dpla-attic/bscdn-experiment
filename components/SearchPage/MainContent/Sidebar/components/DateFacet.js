@@ -3,24 +3,33 @@ import css from "../Sidebar.module.scss";
 import { Button } from '@material-ui/core'
 
 class DateFacet extends React.Component {
-  componentWillMount() {
-    this.setState({
+  constructor(props) {
+    super(props)
+
+    this.state = {
       after: this.props.after || "",
       before: this.props.before || ""
-    });
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (
-      nextProps.after !== this.state.after ||
-      nextProps.before !== this.state.before
-    ) {
-      this.setState({
-        after: nextProps.after || "",
-        before: nextProps.before || ""
-      });
     }
   }
+
+  // componentDidMount() {
+  //   this.setState({
+  //     after: this.props.after || "",
+  //     before: this.props.before || ""
+  //   });
+  // }
+
+  // componentDidUpdate(nextProps) {
+  //   if (
+  //     nextProps.after !== this.state.after ||
+  //     nextProps.before !== this.state.before
+  //   ) {
+  //     this.setState({
+  //       after: nextProps.after || "",
+  //       before: nextProps.before || ""
+  //     });
+  //   }
+  // }
 
   cleanText(target, compare) {
     let year = target.value;

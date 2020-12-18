@@ -4,9 +4,10 @@ import fetch from "isomorphic-fetch";
 
 import BWSHead from "components/BWSHead";
 import MainLayout from "components/MainLayout";
-import CiteButton from "components/shared/CiteButton";
-import BreadcrumbsModule from "components/ItemComponents/BreadcrumbsModule";
 import Content from "components/ItemComponents/Content";
+import Typography from '@material-ui/core/Typography';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import Link from '@material-ui/core/Link';
 
 import { API_ENDPOINT } from "constants/items";
 
@@ -27,19 +28,12 @@ const ItemDetail = ({url, item}) => {
         pageDescription={item.description}
         pageImage={item.thumbnailUrl}
       />
-      <BreadcrumbsModule
-        breadcrumbs={[
-          {
-            title: "All items",
-            url: {
-              pathname: "/search"
-            }
-          },
-          { title: joinIfArray(item.title), search: "" }
-        ]}
-        route={url}
-      />
-
+      <Breadcrumbs aria-label="breadcrumb">
+        <Link color="inherit" href="/search">
+          All items
+        </Link>
+        <Typography color="textPrimary">{ joinIfArray(item.title) }</Typography>
+      </Breadcrumbs>
       <main
          id="main"
          role="main"

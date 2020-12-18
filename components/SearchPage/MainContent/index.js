@@ -1,12 +1,18 @@
 import React from "react";
 
 import ListView from "components/shared/ListView";
-import Pagination from "components/shared/Pagination";
+// import Pagination from "components/shared/Pagination";
 import Sidebar from "./Sidebar";
+import Pagination from '@material-ui/lab/Pagination';
+import { useRouter } from 'next/router'
 
 import { addLinkInfoToResults } from "lib";
 
 import css from "./MainContent.module.scss";
+
+// const updatePage = () => {
+//   console.log(route.query)
+// }
 
 const MainContent = ({
   results,
@@ -14,7 +20,11 @@ const MainContent = ({
   facets,
   paginationInfo,
   hideSidebar,
-}) =>
+}) => {
+  const router = useRouter()
+  const { pid } = router.query
+
+  return (
   <div className={css.wrapper}>
     <div className={`container ${css.mainContent}`}>
       {results.length > 0 &&
@@ -43,7 +53,11 @@ const MainContent = ({
               <li>try removing filters</li>
             </ul>
           </div>}
-        <Pagination
+
+          <Pagination count={10} page={parseInt(paginationInfo.currentPage, 10)} 
+          onChange={updatePage}/>
+
+        {/* <Pagination
           route={route}
           itemsPerPage={paginationInfo.pageSize}
           currentPage={parseInt(paginationInfo.currentPage, 10)}
@@ -51,9 +65,11 @@ const MainContent = ({
           pageCount={Math.ceil(
             paginationInfo.pageCount / paginationInfo.pageSize
           )}
-        />
+        /> */}
       </div>
     </div>
-  </div>;
+  </div>
+  )
+}
 
 export default MainContent;

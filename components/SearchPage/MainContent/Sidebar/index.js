@@ -20,6 +20,7 @@ import {
 import { escapeForRegex } from "lib";
 
 import css from "./Sidebar.module.scss";
+import zIndex from "@material-ui/core/styles/zIndex";
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -61,10 +62,10 @@ class Sidebar extends React.Component {
           Refine Your Search
         </Typography>
         <div>
-          {Object.keys(facets).map((key, i) => {
+          {Object.keys(facets).map((key, index) => {
             if (key.indexOf("sourceResource.date") === -1 && key.indexOf("tags") === -1) {
               return (
-                <Accordion>
+                <Accordion key={`sidebar-accordion-${index}`}>
                   <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
@@ -74,10 +75,11 @@ class Sidebar extends React.Component {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      {facets[key].terms.map(termObject => {
+                      {facets[key].terms.map((termObject, index) => {
                         if (possibleFacets.includes(key)) {
                           return (
                             <FacetLink
+                              key={index}
                               route={route}
                               termObject={termObject}
                               queryKey={mapFacetsToURLPrettified[key]}
@@ -97,7 +99,7 @@ class Sidebar extends React.Component {
                 if (route.query.after) dateProps.after = route.query.after;
                 if (route.query.before) dateProps.before = route.query.before;
                 return (
-                  <Accordion>
+                  <Accordion key={`data-accordion-${index}`}>
                     <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
                       aria-controls="panel1a-content"
