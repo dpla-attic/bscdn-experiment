@@ -10,8 +10,8 @@ import {
 import { joinIfArray } from "lib";
 
 import css from "./FiltersList.module.scss";
-
-const closeIcon = "/static/icon/facet/icon-facet-delete.png";
+import Chip from '@material-ui/core/Chip';
+import CloseIcon from '@material-ui/icons/Close';
 
 const clearAllFacets = query => {
   const duped = Object.assign({}, query);
@@ -37,10 +37,15 @@ const clearFacet = (query, queryKey, facet) => {
   return duped;
 };
 
+const handleDelete = () => () => {
+   console.log('clicked')
+  // setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
+};
+
 const Filter = ({ name, queryKey, route }) => {
   const label = queryKey !== "q" ? queryKey : "keywords";
   return (
-    <li className={css.filter}>
+    <li>
       <Link
         href={{
           pathname: route.pathname,
@@ -53,7 +58,7 @@ const Filter = ({ name, queryKey, route }) => {
           aria-label={`Remove ${label} ${name} filter`}
         >
           {label}: <span className={css.filterText}>{name}</span>
-          <img src={closeIcon} alt={`clear ${name} filter`} />
+          <CloseIcon alt={`clear ${name} filter`}/>
         </a>
       </Link>
     </li>
@@ -73,11 +78,12 @@ class FiltersList extends React.Component {
               ? css.isOpen
               : ""} ${css.filtersList} container`}
           >
-            <div className={css.labelAndFilters}>
-              <span className={css.labelText}>FILTERS</span>
+            <div className={css.labelAndFilters}>              
+              <span>Filters</span>
               <ul className={css.filters}>
                 {Object.keys(query).map((queryKey, index) => {
                   const value = joinIfArray(query[queryKey], "|");
+                  
                   if (
                     possibleFacets.includes(
                       mapURLPrettifiedFacetsToUgly[queryKey]
@@ -92,7 +98,14 @@ class FiltersList extends React.Component {
                           queryKey !== "before"
                           ? paramValue.replace(/"/g, "")
                           : paramValue;
+                        const label = queryKey !== "q" ? queryKey : "keywords";
                         return (
+                          // <Chip 
+                          // key={idx}
+                          // label="Basic" 
+                          // variant="outlined" 
+                          // label={`${label}: ${name}`} 
+                          // onDelete={handleDelete}/>
                           <Filter
                             route={this.props.route}
                             queryKey={queryKey}

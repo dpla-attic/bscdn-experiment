@@ -2,11 +2,12 @@ import React from "react";
 
 import fetch from "isomorphic-fetch";
 
-import BWSHead from "components/BWSHead";
+import BSCDNHead from "components/BSCDNHead";
 import MainLayout from "components/MainLayout";
-import CiteButton from "components/shared/CiteButton";
-import BreadcrumbsModule from "components/ItemComponents/BreadcrumbsModule";
 import Content from "components/ItemComponents/Content";
+import Typography from '@material-ui/core/Typography';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import Link from '@material-ui/core/Link';
 
 import { API_ENDPOINT } from "constants/items";
 
@@ -22,24 +23,17 @@ import css from "components/ItemComponents/itemComponent.module.scss";
 const ItemDetail = ({url, item}) => {
   return (
     <MainLayout>
-      <BWSHead 
+      <BSCDNHead 
         pageTitle={`${item.title} | DPLA`}
         pageDescription={item.description}
         pageImage={item.thumbnailUrl}
       />
-      <BreadcrumbsModule
-        breadcrumbs={[
-          {
-            title: "All items",
-            url: {
-              pathname: "/search"
-            }
-          },
-          { title: joinIfArray(item.title), search: "" }
-        ]}
-        route={url}
-      />
-
+      <Breadcrumbs aria-label="breadcrumb">
+        <Link color="inherit" href="/search">
+          All items
+        </Link>
+        <Typography color="textPrimary">{ joinIfArray(item.title) }</Typography>
+      </Breadcrumbs>
       <main
          id="main"
          role="main"

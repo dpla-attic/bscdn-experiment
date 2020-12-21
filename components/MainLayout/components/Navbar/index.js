@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 import scss from "./Navbar.module.scss"
 import SearchBar from "components/shared/SearchBar";
-import ActiveLink from './ActiveLink'
+import SearchIcon from '@material-ui/icons/Search';
 
 class Navbar extends Component {
   constructor() {
@@ -11,7 +11,6 @@ class Navbar extends Component {
     this.state = {
       showSearchbar: false
     }
-
   }
 
   componentDidMount = () => {
@@ -29,32 +28,25 @@ class Navbar extends Component {
     })
   }
 
-
   render() {
     return (
       <>
         <nav className={scss.navbar} data-cy="navbar">
           <div className={scss.nav__logo} data-cy="nav__logo">
             <Link href="/">
-              <a>
-                <img src={'static/logo/logo.png'} alt="Big Sky Digital Network"/>
+              <a>              
+                <img src={'/static/logo/logo.png'} alt="Big Sky Digital Network"/>
               </a>
             </Link>
           </div>
 
           <div className={scss.nav__links} data-cy="nav__links">
-
-            {/* <ActiveLink activeClassName={scss.active} href="/about">
-              <a>About</a>
-            </ActiveLink> */}
-
             <a href="https://dp.la" target="_blank">Visit DPLA</a>
             <div className={scss.divider} />
 
             <button onClick={this.triggerSearchbar} data-cy="searchbar__icon">
-              <img src={"/static/icon/search/search-bar.svg"} alt="Search Bar" className={scss.searchIcon} />
+              <SearchIcon />
             </button>
-
           </div>
         </nav>
 

@@ -2,9 +2,11 @@ import React from "react"
 import MainLayout from "components/MainLayout"
 import HomePage from "components/HomePage"
 import BSCDNHead from "components/BSCDNHead";
+import { Container } from '@material-ui/core';
 
 const Home = () => {
   return (
+    <Container maxWidth="lg">
       <MainLayout className="main" role="main">
           <BSCDNHead 
           pageTitle="BSCDN Experiment | DPLA"
@@ -14,6 +16,8 @@ const Home = () => {
           />
         <HomePage/>
       </MainLayout>
+    </Container>
+      
   )
 };
 

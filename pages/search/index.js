@@ -7,7 +7,7 @@ import OptionsBar from "components/SearchPage/OptionsBar";
 import FiltersList from "components/SearchPage/FiltersList";
 import MainContent from "components/SearchPage/MainContent";
 import MaxPageError from "components/SearchPage/MaxPageError";
-import BWSHead from "components/BWSHead";
+import BSCDNHead from "components/BSCDNHead";
 
 import {
     getCurrentUrl,
@@ -63,7 +63,7 @@ class Search extends React.Component {
 
         return (
             <MainLayout>
-                <BWSHead
+                <BSCDNHead
                     pageTitle={query === undefined ? 
                         "Search Results | DPLA" :
                         `${query} | Search Results | DPLA`}
