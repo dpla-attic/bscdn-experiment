@@ -1,5 +1,3 @@
-import React from "react";
-
 import ListView from "components/shared/ListView";
 import Sidebar from "./Sidebar";
 import Pagination from '@material-ui/lab/Pagination';
@@ -9,7 +7,6 @@ import { addLinkInfoToResults } from "lib";
 
 import css from "./MainContent.module.scss";
 
-
 const MainContent = ({
   results,
   route,
@@ -18,7 +15,6 @@ const MainContent = ({
   hideSidebar,
 }) => {
   const router = useRouter()
-  const { pid } = router.query
 
   const updatePage = (val) => {
     router.push({

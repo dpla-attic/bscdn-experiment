@@ -2,7 +2,7 @@ import React from "react";
 
 import fetch from "isomorphic-fetch";
 
-import BWSHead from "components/BWSHead";
+import BSCDNHead from "components/BSCDNHead";
 import MainLayout from "components/MainLayout";
 import Content from "components/ItemComponents/Content";
 import Typography from '@material-ui/core/Typography';
@@ -23,7 +23,7 @@ import css from "components/ItemComponents/itemComponent.module.scss";
 const ItemDetail = ({url, item}) => {
   return (
     <MainLayout>
-      <BWSHead 
+      <BSCDNHead 
         pageTitle={`${item.title} | DPLA`}
         pageDescription={item.description}
         pageImage={item.thumbnailUrl}
