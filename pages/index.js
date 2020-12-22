@@ -6,7 +6,7 @@ import { Container } from '@material-ui/core';
 
 const Home = () => {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="md">
       <MainLayout className="main" role="main">
           <BSCDNHead 
           pageTitle="BSCDN Experiment | DPLA"
@@ -16,8 +16,7 @@ const Home = () => {
           />
         <HomePage/>
       </MainLayout>
-    </Container>
-      
+    </Container>  
   )
 };
 

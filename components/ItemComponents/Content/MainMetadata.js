@@ -1,10 +1,7 @@
-import Link from "next/link";
-
 import ItemImage from "./ItemImage";
 import ItemTermValuePair from "./ItemTermValuePair";
 
 import { joinIfArray, readMyRights } from "lib";
-import { rightsURLs } from "constants/site.js";
 import { Button } from "@material-ui/core"
 import OpenInNewIcon from "@material-ui/icons/OpenInNew"
 import css from "./Content.module.scss";
@@ -143,18 +140,3 @@ class MainMetadata extends React.Component {
 }
 
 export default MainMetadata;
-
-
-// {item.sourceUrl &&
-//   <Button 
-//   variant="contained" 
-//   color="primary" 
-//   rel="noopener" 
-//   target="_blank" 
-//   disableElevation 
-//   onClick={getOnClickForExternalLink(item)} 
-//   href={item.sourceUrl}
-//   endIcon={<OpenInNewIcon/>}>
-//     View Item
-//   </Button>
-// }

@@ -7,6 +7,7 @@ import JsonLdMarkup from "./JsonLdMarkup";
 
 import { getFullPath, joinIfArray, googleAnalytics } from "lib";
 import { UNTITLED_TEXT } from "constants/site";
+import { Container } from '@material-ui/core';
 
 import css from "./Content.module.scss";
 import {initGA, logPageView} from "../../../lib/googleAnalytics";
@@ -45,11 +46,14 @@ class Content extends React.Component {
   render() {
     const { item, url } = this.props;
     return (
-      <div className={`section__default ${css.content}`}>
+    <Container maxWidth="md">
+
+      {/* <div className={`section__default ${css.content}`}> */}
         <MainMetadata item={item} />
         <OtherMetadata item={item} />
         <JsonLdMarkup item={item} url={url} />
-      </div>
+      {/* </div> */}
+      </Container>
     );
   }
 }
