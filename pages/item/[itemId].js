@@ -18,7 +18,6 @@ import {
   getItemThumbnail,
 } from "lib";
 
-import css from "components/ItemComponents/itemComponent.module.scss";
 
 const ItemDetail = ({url, item}) => {
   return (
@@ -37,7 +36,7 @@ const ItemDetail = ({url, item}) => {
       <main
          id="main"
          role="main"
-         className={`container ${css.contentWrapper}`}
+         className="container"
        >
          <Content item={item} url={url} />
       </main>

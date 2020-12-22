@@ -16,7 +16,7 @@ const BSCDNHead = (props) => {
 
   const defaultDescription = ""
 
-  const defaultImageUrl = "/static/logo/dpla_bws-logo-color-nav.png"
+  const defaultImageUrl = "/static/logo/logo.png"
 
   const currentPath = router.route;
   const baseUrl = 'http://blackwomenssuffrage.dp.la';
@@ -39,7 +39,7 @@ const BSCDNHead = (props) => {
         <meta name='format-detection' content='telephone=no' />
         <meta name='mobile-web-app-capable' content='yes' />
 
-        <meta name='msapplication-TileColor' content='#4E4294' />
+        <meta name='msapplication-TileColor' content='#BE580C' />
         <meta name='msapplication-tap-highlight' content='no' />
         <meta name='theme-color' content='#000000' />
         <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
