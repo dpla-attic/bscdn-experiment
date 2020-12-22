@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import ListIcon from '@material-ui/icons/List';
 import AppsIcon from '@material-ui/icons/Apps';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { addCommasToNumber } from "lib";
 import {
@@ -135,8 +136,7 @@ class OptionsBar extends React.Component {
                   <span className={css.activeFacetCount}>
                     ({numberOfActiveFacets})
                 </span>}
-                <img className={css.filtersButtonChevron} src="static/icon/search/icon-search-dropdown.svg"
-                  alt="Dropdown menu icon" />
+                <ExpandMoreIcon alt="Dropdown menu icon"/>
               </button>
             </div>
 

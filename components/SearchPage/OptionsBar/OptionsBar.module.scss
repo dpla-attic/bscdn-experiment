@@ -152,10 +152,9 @@
 }
 
 .pageNumber {
-  color: $nyPink;
   font-family: $inter;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1.25px;
   line-height: 21px;
   margin: .75em 1em;
@@ -171,7 +170,6 @@
   align-items: center;
   font-weight: 600;
   font-size: 0.875rem;
-  color: $vividViolet; 
 
   @media ($sm-viewport) {
     display: none;
