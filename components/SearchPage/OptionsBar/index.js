@@ -98,6 +98,7 @@ class OptionsBar extends React.Component {
                   id="demo-simple-select"
                   value={this.state.pageSizeValue}
                   onChange={this.onPageSizeChange}
+                  className={css.select}
                 >
                   {pageSizeOptions.map((item, index) =>
                     <MenuItem value={item.value} key={index}>
@@ -148,6 +149,7 @@ class OptionsBar extends React.Component {
                   id="demo-simple-select"
                   value={this.state.sortValue}
                   onChange={this.onSortChange}
+                  className={css.select}
                 >
                   {sortOptions.map((item, index) =>
                     <MenuItem value={item.value} key={index}>
@@ -166,14 +168,6 @@ class OptionsBar extends React.Component {
                       })
                     }}
                   >
-                    {/* <a
-                      className={[
-                        css.listViewButton,
-                        this.props.route.query.list_view === "grid"
-                          ? css.viewButtonInactive
-                          : css.viewButtonActive
-                      ].join(" ")}
-                    > */}
                     <a
                       className={[
                         css.listViewButton,
