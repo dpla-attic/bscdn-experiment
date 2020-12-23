@@ -1,4 +1,3 @@
-import React from "react"
 import { withRouter } from "next/router"
 import CurvedButton from "components/shared/CurvedButton"
 import scss from "./MobileSearchBar.module.scss"

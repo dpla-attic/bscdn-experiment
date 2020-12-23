@@ -1,4 +1,3 @@
-import React from "react"
 import MainLayout from "components/MainLayout"
 import HomePage from "components/HomePage"
 import BSCDNHead from "components/BSCDNHead";
