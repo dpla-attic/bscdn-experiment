@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Drawer, Button, List, ListItem, ListItemText } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -14,7 +15,10 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'space-between'
+  },
+  image: {
+    height: '50px'
   }
 }));
 
@@ -39,6 +43,12 @@ export default function MobileNavbar() {
   return (
     <nav className={classes.root}>
       <div className={classes.container}>
+        <Link href="/">
+          <a>              
+            <img src={'/static/logo/logo.png'} alt="Big Sky Digital Network" className={classes.image}/>
+          </a>
+        </Link>
+
         <Button onClick={toggleDrawer(true)}>
           {menuDisplayed ? <CloseIcon /> : <MenuIcon />}
         </Button>

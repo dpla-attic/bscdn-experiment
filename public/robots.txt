@@ -1,4 +1,4 @@
-Sitemap: https://blackwomenssuffrage.dp.la/api/sitemap
+Sitemap: https://bscdn-experiment.dp.la/api/sitemap
 
 User-agent: *
 Allow: /*
