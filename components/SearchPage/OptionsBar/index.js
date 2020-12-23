@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import ListIcon from '@material-ui/icons/List';
 import AppsIcon from '@material-ui/icons/Apps';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { addCommasToNumber } from "lib";
 import {
@@ -98,6 +99,7 @@ class OptionsBar extends React.Component {
                   id="demo-simple-select"
                   value={this.state.pageSizeValue}
                   onChange={this.onPageSizeChange}
+                  className={css.select}
                 >
                   {pageSizeOptions.map((item, index) =>
                     <MenuItem value={item.value} key={index}>
@@ -134,8 +136,7 @@ class OptionsBar extends React.Component {
                   <span className={css.activeFacetCount}>
                     ({numberOfActiveFacets})
                 </span>}
-                <img className={css.filtersButtonChevron} src="static/icon/search/icon-search-dropdown.svg"
-                  alt="Dropdown menu icon" />
+                <ExpandMoreIcon alt="Dropdown menu icon"/>
               </button>
             </div>
 
@@ -148,6 +149,7 @@ class OptionsBar extends React.Component {
                   id="demo-simple-select"
                   value={this.state.sortValue}
                   onChange={this.onSortChange}
+                  className={css.select}
                 >
                   {sortOptions.map((item, index) =>
                     <MenuItem value={item.value} key={index}>
@@ -166,14 +168,6 @@ class OptionsBar extends React.Component {
                       })
                     }}
                   >
-                    {/* <a
-                      className={[
-                        css.listViewButton,
-                        this.props.route.query.list_view === "grid"
-                          ? css.viewButtonInactive
-                          : css.viewButtonActive
-                      ].join(" ")}
-                    > */}
                     <a
                       className={[
                         css.listViewButton,

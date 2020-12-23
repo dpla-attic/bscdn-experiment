@@ -1,5 +1,3 @@
-import React from "react";
-
 import css from "./MaxPageError.module.scss";
 
 const MaxPageError = ({ maxPage, requestedPage }) =>

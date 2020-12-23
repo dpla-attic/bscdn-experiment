@@ -1,4 +1,3 @@
-import React from "react";
 import fetch from "isomorphic-fetch";
 import { withRouter } from "next/router";
 

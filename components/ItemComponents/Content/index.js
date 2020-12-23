@@ -1,4 +1,3 @@
-import React from "react";
 import { withRouter } from "next/router";
 
 import MainMetadata from "./MainMetadata";
@@ -6,10 +5,8 @@ import OtherMetadata from "./OtherMetadata";
 import JsonLdMarkup from "./JsonLdMarkup";
 
 import { getFullPath, joinIfArray, googleAnalytics } from "lib";
-import { UNTITLED_TEXT } from "constants/site";
 
-import css from "./Content.module.scss";
-import {initGA, logPageView} from "../../../lib/googleAnalytics";
+import { initGA } from "../../../lib/googleAnalytics";
 
 class Content extends React.Component {
   // items track the clickthroughs and the view for the partner
@@ -45,11 +42,11 @@ class Content extends React.Component {
   render() {
     const { item, url } = this.props;
     return (
-      <div className={`section__default ${css.content}`}>
+      <>
         <MainMetadata item={item} />
         <OtherMetadata item={item} />
         <JsonLdMarkup item={item} url={url} />
-      </div>
+      </>
     );
   }
 }

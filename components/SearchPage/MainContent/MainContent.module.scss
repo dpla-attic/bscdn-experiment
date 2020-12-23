@@ -1,11 +1,5 @@
 @import "stylesheets/variables";
 
-.wrapper {
-  @media ($sm-viewport) {
-    padding-bottom: 10rem;
-  }
-}
-
 .mainContent {
   display: flex;
   flex-direction: column;
@@ -31,10 +25,6 @@
   @media (max-width: $smallEm) {
     margin-top: 1rem;
   }
-}
-
-.noResults {
-  margin: 0 1rem;
 }
 
 .sidebar {

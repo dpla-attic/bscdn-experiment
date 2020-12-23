@@ -1,5 +1,5 @@
 {
-  "name": "black-womens-suffrage",
+  "name": "big-sky-country-digital-network-experiment",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -27,7 +27,6 @@
     "react": "16.13.1",
     "react-aria-modal": "^4.0.0",
     "react-dom": "16.13.1",
-    "react-dropdown": "^1.8.0",
     "react-ga": "^2.7.0",
     "react-helmet": "^6.1.0",
     "react-markdown": "^4.3.1",

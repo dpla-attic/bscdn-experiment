@@ -1,5 +1,3 @@
-import React from "react";
-
 import ItemTermValuePair from "./ItemTermValuePair";
 import FacetLink from "./FacetLink";
 

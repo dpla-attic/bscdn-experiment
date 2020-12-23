@@ -1,5 +1,3 @@
-import React from "react";
-
 import css from "./SkipToContent.module.scss";
 
 const SkipToContent = ({ className, id, isHidden, children }) =>
