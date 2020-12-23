@@ -5,9 +5,8 @@ import OtherMetadata from "./OtherMetadata";
 import JsonLdMarkup from "./JsonLdMarkup";
 
 import { getFullPath, joinIfArray, googleAnalytics } from "lib";
-import { Container } from '@material-ui/core';
 
-import {initGA} from "../../../lib/googleAnalytics";
+import { initGA } from "../../../lib/googleAnalytics";
 
 class Content extends React.Component {
   // items track the clickthroughs and the view for the partner
@@ -43,11 +42,11 @@ class Content extends React.Component {
   render() {
     const { item, url } = this.props;
     return (
-    <Container maxWidth="md">
-      <MainMetadata item={item} />
-      <OtherMetadata item={item} />
-      <JsonLdMarkup item={item} url={url} />
-    </Container>
+      <>
+        <MainMetadata item={item} />
+        <OtherMetadata item={item} />
+        <JsonLdMarkup item={item} url={url} />
+      </>
     );
   }
 }
