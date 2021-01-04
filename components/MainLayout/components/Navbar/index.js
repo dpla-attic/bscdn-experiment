@@ -31,7 +31,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {show && <SearchBar />}
+      {/* {show && <SearchBar />} */}
     </>
   )
 }
