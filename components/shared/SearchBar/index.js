@@ -4,12 +4,20 @@ import { Button, Input, InputAdornment } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    [theme.breakpoints.up('sm')]: {
+      display: 'none'
+    },
+  },
   margin: {
     margin: theme.spacing(1),
   },
   input: {
     padding: '1em',
-    width: '60%'
+    width: '60%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   center: {
     justifyContent: 'center',

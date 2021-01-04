@@ -15,7 +15,8 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    padding: '1em 0'
   },
   image: {
     height: '50px'
