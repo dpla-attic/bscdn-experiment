@@ -3,6 +3,7 @@ import { Drawer, Button, List, ListItem, ListItemText } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
+import SearchBar from "components/shared/SearchBar";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,8 +46,8 @@ export default function MobileNavbar() {
     <nav className={classes.root}>
       <div className={classes.container}>
         <Link href="/">
-          <a>              
-            <img src={'/static/logo/logo.png'} alt="Big Sky Digital Network" className={classes.image}/>
+          <a>
+            <img src={'/static/logo/logo.png'} alt="Big Sky Digital Network" className={classes.image} />
           </a>
         </Link>
 
@@ -64,6 +65,7 @@ export default function MobileNavbar() {
           ))}
         </List>
       </Drawer>
+      <SearchBar />
     </nav>
   );
 }
