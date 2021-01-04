@@ -29,7 +29,7 @@ const MainContent = ({
   const updatePage = (val) => {
     router.push({
       pathname: router.pathname,
-      query: `page=${val}`
+      query: {...router.query, page: val}
     })
   }
 
