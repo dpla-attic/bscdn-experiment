@@ -2,17 +2,42 @@ import ListView from "components/shared/ListView";
 import Sidebar from "./Sidebar";
 import Pagination from '@material-ui/lab/Pagination';
 import { useRouter } from 'next/router'
-
 import { addLinkInfoToResults } from "lib";
 import { List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import CheckIcon from '@material-ui/icons/Check';
-import css from "./MainContent.module.scss";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(1),
+  },
+  main: {
+    display: 'flex',
+    flexDirection: 'column',
+    [theme.breakpoints.up('sm')]: {
+      paddingRight: 0,
+      paddingLeft: 0,
+      marginTop: '2rem',
+      flexDirection: 'row'
+    },
+  },
+  sidebar: {
+    flexBasis: '33%',
+    overflow: 'hidden',
+    visibility: 'hidden',
+    maxHeight: 0,
+    transition: 'max-height 0.15s ease-in-out, visibility 0s 0.15s',
+    '& .isOpen': {
+      display: 'inline',
+      maxHeight: '200rem'
+    },
+    [theme.breakpoints.up('sm')]: {
+      marginRight: '1rem',
+      maxHeight: 'none',
+      visibility: 'visible',
+      overflow: 'visible'
+    }
   },
 }));
 
@@ -34,12 +59,12 @@ const MainContent = ({
   }
 
   return (
-    <div className={css.mainContent}>
+    <div className={classes.main}>
       {results.length > 0 &&
-        <div className={`${!hideSidebar ? css.isOpen : ""} ${css.sidebar}`}>
+        <div className={`${!hideSidebar ? classes.isOpen : ""} ${classes.sidebar}`}>
           <Sidebar route={route} facets={facets} />
         </div>}
-      <div id="main" role="main" className={css.resultsAndPagination}>
+      <div id="main" role="main">
         {results.length > 0 &&
           <ListView
             route={route}
