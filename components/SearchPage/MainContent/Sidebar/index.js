@@ -15,17 +15,6 @@ import {
 import { escapeForRegex } from "lib";
 
 import css from "./Sidebar.module.scss";
-import zIndex from "@material-ui/core/styles/zIndex";
-
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     width: '100%',
-//   },
-//   heading: {
-//     fontSize: theme.typography.pxToRem(15),
-//     fontWeight: theme.typography.fontWeightRegular,
-//   },
-// }));
 
 class Sidebar extends React.Component {
   componentWillReceiveProps(nextProps) {
