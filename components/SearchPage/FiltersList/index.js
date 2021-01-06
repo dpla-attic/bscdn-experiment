@@ -9,7 +9,6 @@ import {
 import { joinIfArray } from "lib";
 
 import css from "./FiltersList.module.scss";
-import Chip from '@material-ui/core/Chip';
 import CloseIcon from '@material-ui/icons/Close';
 
 const clearAllFacets = query => {
@@ -67,7 +66,7 @@ const Filter = ({ name, queryKey, route }) => {
 class FiltersList extends React.Component {
   render() {
     const { query } = this.props.route;
-    const { onClickToggleFilters, showFilters } = this.props;
+    const { showFilters } = this.props;
     return Object.keys(query).some(queryKey =>
       possibleFacets.includes(mapURLPrettifiedFacetsToUgly[queryKey]) || queryKey === "tags"
     )
@@ -99,12 +98,6 @@ class FiltersList extends React.Component {
                           : paramValue;
                         const label = queryKey !== "q" ? queryKey : "keywords";
                         return (
-                          // <Chip 
-                          // key={idx}
-                          // label="Basic" 
-                          // variant="outlined" 
-                          // label={`${label}: ${name}`} 
-                          // onDelete={handleDelete}/>
                           <Filter
                             route={this.props.route}
                             queryKey={queryKey}

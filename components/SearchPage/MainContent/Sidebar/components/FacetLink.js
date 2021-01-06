@@ -6,6 +6,7 @@ const useStyles = makeStyles(() => ({
   facet: {
     marginBottom: '0.5rem',
     display: 'flex',
+    // width: '100%',
     '&:hover .facetName': {
       textDecoration: 'underline'
     }
@@ -32,36 +33,36 @@ const FacetLink = ({ route, queryKey, termObject, disabled }) => {
 
   return (
     disabled
-      ? <a className={classes.facet}>
-          <p className={`${classes.facetName} ${classes.active}`}>
-            {`${termObject.term} `}
-          </p>
-          <p className={classes.count}>
-            {addCommasToNumber(termObject.count)}
-          </p>
-        </a>
-      : <Link
-        href={{
-          pathname: route.pathname,
-          query: Object.assign({}, route.query, {
-            // some facet names have spaces, and we need to wrap them in " "
-            [queryKey]: route.query[queryKey]
-              ? [`${route.query[queryKey]}`, `"${[termObject.term]}"`].join("|")
-              : `"${termObject.term}"`,
-            page: 1
-          })
-        }}
-      >
-        <a className={classes.facet}>
-          <p className={classes.facetName}>
-            {`${termObject.term} `}
-          </p>
-          <p className={classes.count}>
-            {addCommasToNumber(termObject.count)}
-          </p>
-        </a>
-      </Link>
-  )
+    ? <span className={classes.facet}>
+      <span className={`${classes.facetName} ${classes.active}`}>
+        {`${termObject.term} `}
+      </span>
+      <span className={classes.count}>
+        {addCommasToNumber(termObject.count)}
+      </span>
+    </span>
+    : <Link
+      href={{
+        pathname: route.pathname,
+        query: Object.assign({}, route.query, {
+          // some facet names have spaces, and we need to wrap them in " "
+          [queryKey]: route.query[queryKey]
+            ? [`${route.query[queryKey]}`, `"${[termObject.term]}"`].join("|")
+            : `"${termObject.term}"`,
+          page: 1
+        })
+      }}
+    >
+      <a className={classes.facet}>
+        <span className={classes.facetName}>
+          {`${termObject.term} `}
+        </span>
+        <span className={classes.count}>
+          {addCommasToNumber(termObject.count)}
+        </span>
+      </a>
+    </Link>
+  )  
 }
 
 export default FacetLink

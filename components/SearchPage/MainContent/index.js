@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   main: {
     display: 'flex',
     flexDirection: 'column',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up(640)]: {
       paddingRight: 0,
       paddingLeft: 0,
       marginTop: '2rem',
@@ -24,19 +24,10 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebar: {
     flexBasis: '33%',
-    overflow: 'hidden',
-    visibility: 'hidden',
-    maxHeight: 0,
-    transition: 'max-height 0.15s ease-in-out, visibility 0s 0.15s',
-    '& .isOpen': {
-      display: 'inline',
-      maxHeight: '200rem'
-    },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up(640)]: {
       marginRight: '1rem',
       maxHeight: 'none',
-      visibility: 'visible',
-      overflow: 'visible'
+      display: 'inline',
     }
   },
 }));
@@ -45,8 +36,7 @@ const MainContent = ({
   results,
   route,
   facets,
-  paginationInfo,
-  hideSidebar,
+  paginationInfo
 }) => {
   const router = useRouter()
   const classes = useStyles();
@@ -61,7 +51,7 @@ const MainContent = ({
   return (
     <div className={classes.main}>
       {results.length > 0 &&
-        <div className={`${!hideSidebar ? classes.isOpen : ""} ${classes.sidebar}`}>
+        <div className={classes.sidebar}>
           <Sidebar route={route} facets={facets} />
         </div>}
       <div id="main" role="main">

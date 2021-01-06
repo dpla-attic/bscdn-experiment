@@ -31,11 +31,11 @@ import Head from "next";
 class Search extends React.Component {
 
     state = {
-        showSidebar: false
+        showMobileFilters: false
     };
 
     toggleFilters = () => {
-        this.setState({ showSidebar: !this.state.showSidebar });
+        this.setState({ showMobileFilters: !this.state.showMobileFilters });
     };
 
     render() {
@@ -71,7 +71,7 @@ class Search extends React.Component {
                         `Search results for "${query}"`}
                 />
                 <OptionsBar
-                    showFilters={this.state.showSidebar}
+                    // showFilters={this.state.showMobileFilters}
                     currentPage={currentPage}
                     route={router}
                     itemCount={itemCount}
@@ -79,14 +79,12 @@ class Search extends React.Component {
                     numberOfActiveFacets={numberOfActiveFacets}
                 />
                 <FiltersList
-                    showFilters={this.state.showSidebar}
-                    onClickToggleFilters={this.toggleFilters}
+                    showFilters={this.state.showMobileFilters}
                     route={router}
                     facets={results.facets}
                 />
                 {currentPage <= MAX_PAGE_SIZE &&
                 <MainContent
-                    hideSidebar={!this.state.showSidebar}
                     paginationInfo={{
                         pageCount: pageCount,
                         pageSize: pageSize || DEFAULT_PAGE_SIZE,

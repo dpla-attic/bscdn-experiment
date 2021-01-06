@@ -75,11 +75,6 @@ class OptionsBar extends React.Component {
     });
   };
 
-  toggleFilters = () => {
-    this.setState({ showFilters: !this.state.showFilters });
-  };
-
-
   render() {
     const {
       currentPage,
