@@ -63,7 +63,7 @@ class Search extends React.Component {
         return (
             <MainLayout>
                 <BSCDNHead
-                    pageTitle={query === undefined ? 
+                    pageTitle={query === undefined || query === '' ? 
                         "Search Results | DPLA" :
                         `${query} | Search Results | DPLA`}
                     pageDescription={query === undefined ? 
@@ -71,7 +71,7 @@ class Search extends React.Component {
                         `Search results for "${query}"`}
                 />
                 <OptionsBar
-                    // showFilters={this.state.showMobileFilters}
+                    showFilters={this.state.showMobileFilters}
                     currentPage={currentPage}
                     route={router}
                     itemCount={itemCount}
@@ -93,6 +93,7 @@ class Search extends React.Component {
                     route={router}
                     facets={results.facets}
                     results={results.docs}
+                    showFilters={this.state.showMobileFilters}
                 />}
                 {currentPage > MAX_PAGE_SIZE &&
                 <MaxPageError maxPage={MAX_PAGE_SIZE} requestedPage={currentPage} />}
@@ -100,18 +101,6 @@ class Search extends React.Component {
         );
     }
 }
-
-const getItemCount = (results) => {
-    var itemCount = 0;// default handles unexpected error
-    if ("count" in results) {
-        if (results.count.value !== undefined) {
-            itemCount = results.count.value // ElasticSearch 7
-        } else {
-            itemCount = results.count // ElasticSearch 6
-        }
-    }
-    return itemCount;
-};
 
 Search.getInitialProps = async context => {
     const query = context.query;

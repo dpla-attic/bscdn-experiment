@@ -24,19 +24,24 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebar: {
     flexBasis: '33%',
+    display: 'none',
     [theme.breakpoints.up(640)]: {
       marginRight: '1rem',
       maxHeight: 'none',
       display: 'inline',
     }
   },
+  showSidebar: {
+    display: 'inline'
+  }
 }));
 
 const MainContent = ({
   results,
   route,
   facets,
-  paginationInfo
+  paginationInfo,
+  showFilters
 }) => {
   const router = useRouter()
   const classes = useStyles();
@@ -50,10 +55,15 @@ const MainContent = ({
 
   return (
     <div className={classes.main}>
-      {results.length > 0 &&
+      {results.length > 0 && showFilters ?
+        <div className={`${classes.sidebar} ${classes.showSidebar}`}>
+          <Sidebar route={route} facets={facets} />
+        </div>
+      :  
         <div className={classes.sidebar}>
           <Sidebar route={route} facets={facets} />
-        </div>}
+        </div>
+      }
       <div id="main" role="main">
         {results.length > 0 &&
           <ListView
