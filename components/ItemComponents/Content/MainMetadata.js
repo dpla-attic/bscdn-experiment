@@ -64,12 +64,11 @@ class MainMetadata extends React.Component {
       <div className={css.mainMetadata}>
         <dl className={css.contentDL}>
           <div className={css.termValuePair}>
-            <dt className={`${css.term} ${css.imageLabel}`}>Image</dt>
             <dd className={css.value}>
               <ItemImage
                 title=""
                 type={item.type}
-                url={item.thumbnailUrl}
+                url={item.image}
                 defaultImageClass={css.defaultItemImage}
                 useDefaultImage={item.useDefaultImage}
               />

@@ -20,7 +20,7 @@ const ItemDetail = ({ url, item }) => {
       <BSCDNHead
         pageTitle={`${item.title} | DPLA`}
         pageDescription={item.description}
-        pageImage={item.thumbnailUrl}
+        pageImage={item.image}
       />
       <Box p='1em'>
         <Breadcrumbs aria-label="breadcrumb">
@@ -54,7 +54,7 @@ export async function getServerSideProps(context) {
     const json = await res.json();
 
     const doc = json.docs[0];
-    const thumbnailUrl = getItemThumbnail(doc);
+    const image = process.env.FULL_FRAME_IMAGES ? `https://bscdn-images.dp.la/${doc.id}.jpg` : getItemThumbnail(doc)
     const date = doc.sourceResource.date &&
       Array.isArray(doc.sourceResource.date)
       ? doc.sourceResource.date[0]
@@ -72,7 +72,7 @@ export async function getServerSideProps(context) {
         currentFullUrl,
         item: Object.assign({}, doc.sourceResource, {
           id: doc.id,
-          thumbnailUrl,
+          image,
           contributor: doc.dataProvider,
           intermediateProvider: doc.intermediateProvider ? doc.intermediateProvider : "",
           date: date ? date : "",
