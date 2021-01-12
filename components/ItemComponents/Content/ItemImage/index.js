@@ -30,7 +30,7 @@ class ItemImage extends React.Component {
         <img
           src={updateToDefaultImage ? getDefaultThumbnail(type) : url}
           alt={title}
-          className={css.image}
+          className={ process.env.FULL_FRAME_IMAGES ? css.image_stretch : css.image }
         />
       </div>
     );
