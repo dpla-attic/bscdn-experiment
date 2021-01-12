@@ -1,4 +1,4 @@
-const absoluteLink = (path) => { return `https://bscdn-experiment.dp.la${path}` }
+const absoluteLink = (path) => { return `https://${process.env.SITE_NAME}.dp.la${path}` }
 
 const buildEntry = (link, date) => {
     return `<url>
