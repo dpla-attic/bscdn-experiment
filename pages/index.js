@@ -6,10 +6,10 @@ const Home = () => {
   return (
     <MainLayout className="main" role="main">
       <BSCDNHead
-        pageTitle="BSCDN Experiment | DPLA"
+        pageTitle="Experiment | DPLA"
         pageDescription=""
         pageImage="/static/graphic/image/home-hero-bg.png"
-        pageImageCaption="Images from the BSCDN Experiment"
+        pageImageCaption="Images from the Experiment"
       />
       <HomePage />
     </MainLayout>

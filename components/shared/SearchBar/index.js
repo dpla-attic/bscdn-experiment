@@ -36,8 +36,8 @@ const SearchBar = ({ searchQuery, router }) => {
         key={searchQuery}
         className={classes.input}
         defaultValue={router && router.query && router.query.q ? router.query.q : ""}
-        placeholder="Search the Big Sky Digital Network"
-        aria-label="Search the Big Sky Digital Network"
+        placeholder="Search the Collection"
+        aria-label="Search the Collection"
         autoComplete="off"
         name="q"
         type="search"

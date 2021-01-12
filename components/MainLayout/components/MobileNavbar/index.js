@@ -47,7 +47,7 @@ export default function MobileNavbar() {
       <div className={classes.container}>
         <Link href="/">
           <a>
-            <img src={'/static/logo/logo.png'} alt="Big Sky Digital Network" className={classes.image} />
+            <img src={'/static/logo/dpla-logo-black.svg'} alt="DPLA" className={classes.image} />
           </a>
         </Link>
 
