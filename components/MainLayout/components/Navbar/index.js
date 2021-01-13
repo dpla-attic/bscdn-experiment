@@ -59,7 +59,7 @@ export default function Navbar() {
         <div data-cy="nav__logo">
           <Link href="/">
             <a>
-              <img src={'/static/logo/logo.png'} alt="Big Sky Digital Network" />
+              <img src={'/static/logo/dpla-logo-black.svg'} alt="DPLA" />
             </a>
           </Link>
         </div>
