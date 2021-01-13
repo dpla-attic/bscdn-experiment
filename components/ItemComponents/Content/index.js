@@ -1,31 +1,32 @@
-import { withRouter } from "next/router";
+import { withRouter } from "next/router"
 
-import MainMetadata from "./MainMetadata";
-import OtherMetadata from "./OtherMetadata";
-import JsonLdMarkup from "./JsonLdMarkup";
+import MainMetadata from "./MainMetadata"
+import OtherMetadata from "./OtherMetadata"
+import JsonLdMarkup from "./JsonLdMarkup"
 
-import { getFullPath, joinIfArray, googleAnalytics } from "lib";
+import { getFullPath, joinIfArray, googleAnalytics } from "lib"
 
-import { initGA } from "../../../lib/googleAnalytics";
+import { initGA } from "../../../lib/googleAnalytics"
+import { useEffect } from 'react'
 
-class Content extends React.Component {
-  // items track the clickthroughs and the view for the partner
-  componentDidMount() {
+const Content = ({item, url}) => {
+  useEffect(() => {
+    // items track the clickthroughs and the view for the partner
     if (!window.GA_INITIALIZED) {
       initGA()
       window.GA_INITIALIZED = true
     }
-    this.trackItemView();
-  }
+    trackItemView();
+  })
 
-  trackItemView() {
+  const trackItemView = () => {
     const fullPath = getFullPath();
-    const itemId = this.props.router.query.itemId;
-    const title = joinIfArray(this.props.item.title, ", ");
-    const contributor = joinIfArray(this.props.item.contributor, ", ");
-    const partner = joinIfArray(this.props.item.partner, ", ");
+    const itemId = item.id;
+    const title = joinIfArray(item.title, ", ");
+    const contributor = joinIfArray(item.contributor, ", ");
+    const partner = joinIfArray(item.partner, ", ");
 
-    if (fullPath !== this.lastTrackedPath) {
+    // if (fullPath !== this.lastTrackedPath) {
       const gaEvent = {
         type: "View Item",
         itemId: itemId,
@@ -34,21 +35,18 @@ class Content extends React.Component {
         contributor: contributor
       };
 
-      this.lastTrackedPath = fullPath;
+    //   this.lastTrackedPath = fullPath;
       googleAnalytics.logEvent(gaEvent);
-    }
+    // }
   }
 
-  render() {
-    const { item, url } = this.props;
-    return (
-      <>
+  return (
+    <>
         <MainMetadata item={item} />
         <OtherMetadata item={item} />
         <JsonLdMarkup item={item} url={url} />
-      </>
-    );
-  }
+    </>
+  )
 }
 
 export default withRouter(Content);
