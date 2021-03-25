@@ -10,7 +10,8 @@ User-agent: *
 Allow: /*
 Allow: /api/sitemap
 Disallow: /api/health
-Disallow: /api/dpla/*`;
+Disallow: /api/dpla/*
+Disallow: /search`;
 
         res.setHeader('Content-Type', 'text/plain');
         res.write(robots);
