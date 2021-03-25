@@ -1,6 +1,6 @@
 import MainLayout from "components/MainLayout"
-import HomePage from "components/HomePage"
 import BSCDNHead from "components/BSCDNHead";
+import HomePage from "../components/HomePage";
 
 const Home = () => {
   return (
@@ -8,10 +8,10 @@ const Home = () => {
       <BSCDNHead
         pageTitle="Experiment | DPLA"
         pageDescription=""
-        pageImage="/static/graphic/image/home-hero-bg.png"
+        pageImage="https://bscdn-images.dp.la/013a8eff82f6dac7918b31ead0ccba9a.jpg"
         pageImageCaption="Images from the Experiment"
       />
-      <HomePage />
+      <HomePage/>
     </MainLayout>
   )
 };
