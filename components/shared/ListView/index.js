@@ -137,23 +137,7 @@ class ListView extends React.Component {
                       </span>
                     </span>}
                       <ItemDescription description={item.description} />
-                      <a
-                          href={item.sourceUrl}
-                          target="_blank"
-                          rel="noopener"
-                          onClick={getOnClickForExternalLink(item)}
-                          className={`hover-underline clickThrough external ${css.itemSource}`}
-                      >
-                        {item.type === "image"
-                            ? "View Full Image"
-                            : item.type === "text"
-                                ? "View Full Text"
-                                : "View Full Item"}
-                      </a>
-                      {item.dataProvider &&
-                      <span className={`${css.itemProvider}`}>
-                      &nbsp; in {item.dataProvider}
-                    </span>}
+
                     </div>
                   </li>
               );

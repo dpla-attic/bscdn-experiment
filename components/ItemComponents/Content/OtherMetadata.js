@@ -56,17 +56,6 @@ const OtherMetadata = ({ item }) =>
 
       <div className={css.divider}></div>
 
-      {item.sourceUrl &&
-        <ItemTermValuePair heading="URL">
-          <a
-            className="link clickThrough external"
-            href={item.sourceUrl}
-            target="_blank"
-          >
-            {item.sourceUrl}
-          </a>
-        </ItemTermValuePair>}
-
       {item.edmRights &&
         readMyRights(item.edmRights) &&
         <ItemTermValuePair heading="Standardized Rights Statement">
