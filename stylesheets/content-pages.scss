@@ -161,10 +161,10 @@ $borderColor: rgba(0, 0, 0, 0.75);
   }
 
   & li::before {
-    position: absolute;
+    //position: absolute;
     top: 0;
-    left: -3rem;
-    width: 3rem;
+    //left: -3rem;
+    //width: 3rem;
     padding-right: 0.25rem;
     text-align: right;
     color: $primaryBulletColor;
