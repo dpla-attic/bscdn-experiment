@@ -66,18 +66,7 @@ const MainMetadata = ({ item }) => {
               defaultImageClass={css.defaultItemImage}
               useDefaultImage={item.useDefaultImage}
             />
-            {item.sourceUrl &&
-              <Button
-                variant="contained"
-                color="primary"
-                rel="noopener"
-                target="_blank"
-                disableElevation
-                href={item.sourceUrl}
-                endIcon={<OpenInNewIcon />}>
-                View Item
-                  </Button>
-            }
+
             {renderRightsBadge(item)}
           </dd>
         </div>

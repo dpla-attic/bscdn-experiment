@@ -17,8 +17,9 @@ const BSCDNHead = (props) => {
 
   const defaultImageUrl = "/static/logo/logo.png"
 
+  const siteName = process.env.SITE_NAME;
   const currentPath = router.route;
-  const baseUrl = 'http://blackwomenssuffrage.dp.la';
+  const baseUrl = `https://${siteName}.dp.la/api/sitemap`;
   const currentUrl = `${baseUrl}${currentPath}`
 
   return (
