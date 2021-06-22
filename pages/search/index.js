@@ -193,7 +193,7 @@ Search.getInitialProps = async context => {
                 sourceUrl: result.isShownAt,
                 provider: result.provider && result.provider.name,
                 dataProvider: result.dataProvider,
-                useDefaultImage: !result.object
+                useDefaultImage: false
             });
         }) : [];
 
