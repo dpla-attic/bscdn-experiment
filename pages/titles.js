@@ -36,8 +36,9 @@ const Titles = ({items: items}) => {
 export const getStaticProps = async ({params}) => {
     const tag = SITE_TAG;
     let items = [];
+    const endpoint = process.env.API_URL || 'https://api.dp.la'
     for (let i = 1; i < 11; i++) {
-        const url = `https://api.dp.la/v2/items?page=${i}&page_size=500&filter=${tag}&api_key=${process.env.API_KEY}`;
+        const url = `${endpoint}/v2/items?page=${i}&page_size=500&filter=${tag}&api_key=${process.env.API_KEY}`;
         const res = await fetch(url);
         const json = await res.json();
         items = items.concat(json['docs']);
