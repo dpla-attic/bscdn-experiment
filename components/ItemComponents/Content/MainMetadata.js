@@ -59,6 +59,7 @@ const MainMetadata = ({ item }) => {
       <dl className={css.contentDL}>
         <div className={css.termValuePair}>
           <dd className={css.value}>
+            <h1 className={css.title}>{item.title && item.title !== "" ? joinIfArray(item.title, ", ") : "Untitled"}</h1>
             <ItemImage
               title=""
               type={item.type}
