@@ -15,7 +15,7 @@ const sitemap = async (req, res) => {
     const baseUrl = `https://${process.env.SITE_NAME}.dp.la/item/`;
 
     const readInterface = readline.createInterface(
-        fs.createReadStream("public/bscdn_ids.csv")
+        fs.createReadStream("public/kenning.csv")
     );
 
     const sitemapHeader =
