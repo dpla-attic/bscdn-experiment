@@ -16,7 +16,7 @@ const proxy = (req, res) => {
   req.url = newPath
 
     return httpProxyMiddleware(req, res, {
-        target: 'https://api.dp.la'
+        target: process.env.API_URL || 'https://api.dp.la'
     });
 }
 
