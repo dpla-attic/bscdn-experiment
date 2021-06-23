@@ -15,7 +15,7 @@ const HomePage = ({ siteName }) => {
 
   return (
     <>
-      <Link href={'/item/072c5702a83b7fc48a0b7899c231d5d3'}><a><div style={{
+      <Link href={'/search'}><a><div style={{
         backgroundImage: 'url("https://bscdn-images.dp.la/072c5702a83b7fc48a0b7899c231d5d3.jpg")',
           width: '800px',
           height: '523px',

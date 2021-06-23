@@ -13,8 +13,14 @@ import {
   joinIfArray,
   getItemThumbnail,
 } from "lib";
+import Error from "next/error";
 
-const ItemDetail = ({ url, item }) => {
+const ItemDetail = ({ err, url, item }) => {
+
+  console.log("ERR", err);
+
+  if (err) return <Error statusCode={err}/>
+
   return (
     <MainLayout>
       <BSCDNHead
@@ -51,7 +57,20 @@ export async function getServerSideProps(context) {
   const currentUrl = getCurrentUrl(req);
   try {
     const res = await fetch(`${currentUrl}${API_ENDPOINT}/${itemId}`);
+
     const json = await res.json();
+
+    if (json === "Not Found") {
+      console.log("couldn't find it")
+      res.statusCode = 404
+
+      return {
+        props: {
+          err: 404,
+          error: `Item not found`
+        }
+      }
+    }
 
     const doc = json.docs[0];
     const image = process.env.FULL_FRAME_IMAGES ? `https://bscdn-images.dp.la/${doc.id}.jpg` : getItemThumbnail(doc)
