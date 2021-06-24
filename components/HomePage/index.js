@@ -50,7 +50,7 @@ const HomePage = ({ siteName }) => {
 
         <h2>References Used to Plan and Document the Trip</h2>
 
-        <ul style={{marginLeft: "25px", textIndent: "-55px" }}>
+        <ul style={{marginLeft: "55px", textIndent: "-55px" }}>
             <li>Ferguson, G. (2003). <i>Hawks rest: A season in the remote heart of Yellowstone.</i> National Geographic Adventure Press.</li>
             <li>Murray, C. (2016). <i>Walks in Wild Yellowstone: A summer of solo backpacking in Yellowstone National Park.</i></li>
             <li><i>Old Faithful, Yellowstone National Park SW, Wyoming, Montana, Idaho, USA: Trails Illustrated map ... outdoor recreation map</i> (Revised 2012). (2012). [Map]. National Geographic Maps.</li>
