@@ -16,7 +16,7 @@ const HomePage = ({ siteName }) => {
   return (
     <>
       <Link href={'/search'}><a><div style={{
-        backgroundImage: 'url("https://bscdn-images.dp.la/072c5702a83b7fc48a0b7899c231d5d3.jpg")',
+        backgroundImage: 'url("https://bscdn-images.dp.la/1cbea2f91fbe1df4e8b1686a77f725a8.jpg")',
           width: '800px',
           height: '523px',
         padding: '8px',
@@ -29,44 +29,35 @@ const HomePage = ({ siteName }) => {
       <div style={{paddingTop: '25px'}}>
       <div className={"content"}>
 
-        <h1>Experiment</h1>
+        <h1>Backpacking Yellowstone’s Thorofare Region</h1>
+
+        <h2>Introduction</h2>
 
         <p>
-          This site is part of a search engine optimization experiment being conducted by partners Digital Public
-          Library of America and Big Sky Country Digital Network.
+          This photograph collection documents a nearly 90-mile trip taken on foot over nine days in the southeast corner of Yellowstone National Park in September 2019. The trip began at the Heart Lake trailhead near Lewis Lake and proceeded east past Heart Lake and the south and southeast arms of Yellowstone Lake before intersecting the Thorofare Trail. The route then turned south and reached the Thorofare Ranger Station in the extreme southeast corner of the park. This place is considered the most remote spot in the lower 48 states; it is at least 30 miles to a road in any direction.
         </p>
 
         <p>
-          For an experience built for human consumption, we recommend trying our official sites:
+          From the Thorofare Ranger Station the route turned west along the South Boundary Trail of the park. The hikers did a side trip to the Hawk’s Rest Patrol Cabin, which lies a few miles outside the south boundary of the park, in the Teton Wilderness.
         </p>
 
-        <ul>
-          <li><a href={"https://bscdn.dp.la"}>Big Sky Digital Network</a></li>
-          <li><a href={"https://dp.la"}>Digital Public Library of America</a></li>
+        <p>
+          Returning to the South Boundary Trail, the route gained elevation to Mariposa Lake at 9,400 feet, then dropped 1,000 feet before ascending Big Game Ridge, whose top elevation was approximately 10,000 feet. The trail then followed the Snake River before ending at the park’s south entrance.
+        </p>
+          <p>
+              Hikers from Bozeman, Montana were Kenning Arlitsch, Bob Hietala, and Douglas Wollant, and Robert Patrick from Cleveland, Ohio.
+          </p>
+
+        <h2>References Used to Plan and Document the Trip</h2>
+
+        <ul style={{marginLeft: "25px", textIndent: "-55px" }}>
+            <li>Ferguson, G. (2003). <i>Hawks rest: A season in the remote heart of Yellowstone.</i> National Geographic Adventure Press.</li>
+            <li>Murray, C. (2016). <i>Walks in Wild Yellowstone: A summer of solo backpacking in Yellowstone National Park.</i></li>
+            <li><i>Old Faithful, Yellowstone National Park SW, Wyoming, Montana, Idaho, USA: Trails Illustrated map ... outdoor recreation map</i> (Revised 2012). (2012). [Map]. National Geographic Maps.</li>
+            <li>Schneider, B. (2012). <i>Hiking Yellowstone National Park: A guide to more than 100 great hikes</i> (3rd ed). FalconGuides.</li>
+            <li><i>Yellowstone Lake, Yellowstone National Park SE, Wyoming, USA: Trails Illustrated map ... outdoor recreation map (Rev. 2008).</i> (2008). [Map]. Trails Illustrated.</li>
+            <li>Yochim, M. J. (2016). <i>A week in Yellowstone’s Thorofare: A journey through the remotest place.</i> Oregon State University Press.</li>
         </ul>
-
-        <h2>Have a look at the listing of <Link href={'/titles'}><a>item titles</a></Link>.</h2>
-
-        <h2>About the Thomas Brown Brook Photographs Collection</h2>
-
-        <p><strong>Thomas Brown Brook (1890-1966)</strong> was the son of John Brook, a gold miner who came to Montana in 1863. In 1870, John Brook established a ranch on the Beaverhead River eight miles south of Twin Bridges Montana and Thomas Brook grew up on the ranch and attended local schools. Thomas Brook graduated from the Gallatin County High School in Bozeman, and in 1913 earned a degree in Civil Engineering from Montana State College. After serving in France during World War I, Brook returned to Twin Bridges and worked as an electrician.</p>
-
-        <p>Brook began taking photographs of various locations in and around Twin Bridges as a hobby. Eventually, he engaged in copying historical photographs brought to him by local area individuals. Before his death in 1966, Brook had compiled a substantial collection of both original and copied photographs.</p>
-
-        <p>The Montana State University Library Thomas Brook Photograph Collection includes photos of: nature landscapes and town views of southwest Montana, Twin Bridges, Madison and Beaverhead counties, and cover topics on natural history, ranch and farming operations, bridges and bridge construction, mining and timber outfits, early settlers and historical visitors.</p>
-
-        <p><a rel={"nofollow"} href={"https://arc.lib.montana.edu/finding-aids/item.php?id=84"}>The MSU Library Thomas B. Brook Special Collections Finding Aid</a> has complete details on the photographs, content, and provenance related to this digital archives collection.</p>
-
-        <h2>About the Montana State University (MSU) Historical Photographs Collection</h2>
-
-        <p>The <a rel={"nofollow"} href={"https://www.lib.montana.edu/archives/"}>Montana State University Archives</a> holds over 34,000 volumes and 1,200 linear feet of archive manuscript materials. In addition to the manuscript materials, there are also archived: microforms, sound recordings, film and video recordings, unique maps and historical photographs. Over 4,000 of these historical photographs are of Montana State University from 1893 through the 1960s. These unique MSU historical photos include: early 20th century campus student activities and clubs, campus grounds and buildings, historical events, and prominent alumnus, faculty and administrators.</p>
-
-        <p>In 2012, the Montana State University Archives and the Montana State University Library Digital Initiatives launched the Montana State University (MSU) Historical Photographs Database Project. Phase 1 of the project included selecting historical photographs and scanning and tagging them for browser delivery through a searchable database.</p>
-
-        <p>Phase 1 also included the development of the <a href={"https://arc.lib.montana.edu/msu-photos/app/"}>MSU Historic Photos Tour beta application</a>. The App is designed to deliver selected digital historic photos associated with a map of MSU campus buildings for delivery in hand-held devices to users walking around the campus.</p>
-
-        <p>The <strong>MSU Historical Photographs Database Project</strong> is an on-going, long-term project focused on providing Montana State University historical photographs online and in easily accessible downloadable jpg format.</p>
-
       </div></div>
     </>
   )
